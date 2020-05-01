@@ -1,0 +1,25 @@
+body{
+
+}
+
+#more{
+  position:relative;
+  top:-100px;
+  left:470px;
+  border:5px solid;
+  transition: 0.2s;
+}
+#more:hover {
+  transform: scale(1.05);
+}
+
+#less{
+  position:relative;
+  top:-100px;
+  left:570px;
+  border:5px solid;
+  transition: 0.2s;
+}
+#less:hover {
+  transform: scale(1.05);
+}

@@ -4,7 +4,7 @@ body {
 
 #math{
  position:relative;
- left:180px;
+ left:120px;
  top:120px;
  transition: 1s;
 }
@@ -14,7 +14,7 @@ body {
 
 #physic{
   position:relative;
-  left:370px;
+  left:310px;
   top:120px;
   transition: 1s;
 }
@@ -24,7 +24,7 @@ body {
 
 #it{
   position:relative;
-  left:550px;
+  left:490px;
   top:120px;
   transition: 1s;
 }
