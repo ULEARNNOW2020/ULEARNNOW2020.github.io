@@ -37,6 +37,15 @@ function draw(){
   }
 }
 
+function restart(){
+  ans = 2;
+  first1 = getRandom(0, 10);
+  first = Math.round(first1);
+  second1 = getRandom(0, 10);
+  second = Math.round(second1);
+  ctx.fillStyle = "black";
+}
+
     //   ОТВЕТЫ
 function more(){
   if (first > second){
