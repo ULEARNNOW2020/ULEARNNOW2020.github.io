@@ -63,21 +63,21 @@ function restart(){
 
     //   ОТВЕТЫ
 function more(){
-  if (first > second && time > 0){
+  if (first > second && time > 0 && ans == 2){
     ans = 1;
   } else {
     ans = 0;
   }
 }
 function less(){
-  if (first < second && time > 0){
+  if (first < second && time > 0 && ans == 2){
     ans = 1;
   } else {
     ans = 0;
   }
 }
 function ravno(){
-  if (first==second && time > 0){
+  if (first==second && time > 0 && ans == 2){
     ans = 1;
   } else {
     ans = 0;
