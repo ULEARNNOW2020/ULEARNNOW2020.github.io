@@ -2,35 +2,44 @@ body{
 
 }
 
-#restart{
+#third{
   position:relative;
-  top:-100px;
-  left:670px;
-  border:5px solid;
+  width:5.5%;
+  top:0px;
+  left:190px;
   transition: 0.2s;
+  border:5px solid;
 }
-#restart:hover {
-  transform: scale(1.05);
+#third:hover{
+  transform: scale(1.06);
 }
 
-#more{
+#scnd{
   position:relative;
-  top:-100px;
-  left:470px;
-  border:5px solid;
+  width:5.5%;
+  top:0px;
+  left:140px;
   transition: 0.2s;
+  border:5px solid;
 }
-#more:hover {
-  transform: scale(1.05);
+#scnd:hover{
+  transform: scale(1.06);
 }
 
-#less{
+#frst{
   position:relative;
-  top:-100px;
-  left:570px;
-  border:5px solid;
+  width:5.5%;
+  top:0px;
+  left:90px;
   transition: 0.2s;
+  border:5px solid;
 }
-#less:hover {
-  transform: scale(1.05);
+#frst:hover{
+  transform: scale(1.06);
+}
+
+#video1 {
+  position:relative;
+  top:50px;
+  left:50px;
 }
