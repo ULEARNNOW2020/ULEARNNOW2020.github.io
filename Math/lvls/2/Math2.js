@@ -66,21 +66,27 @@ function more(){
   if (first > second && time > 0 && ans == 2){
     ans = 1;
   } else {
+    if(ans == 2){
     ans = 0;
+    }
   }
 }
 function less(){
   if (first < second && time > 0 && ans == 2){
     ans = 1;
   } else {
+    if(ans == 2){
     ans = 0;
+    }
   }
 }
 function ravno(){
   if (first==second && time > 0 && ans == 2){
     ans = 1;
   } else {
+    if(ans == 2){
     ans = 0;
+    }
   }
 }
 
