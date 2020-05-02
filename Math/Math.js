@@ -15,13 +15,19 @@ function getRandom(min, max) {
 }
 var first1 = getRandom(0, 10);
 var first = Math.round(first1);
-
 var second1 = getRandom(0, 10);
 var second = Math.round(second1);
 
 
+
    //    ОТРИСОВКА
 function draw(){
+  if(first==second){
+    first1 = getRandom(0, 10);
+    first = Math.round(first1);
+    second1 = getRandom(0, 10);
+    second = Math.round(second1);
+  }
   ctx.clearRect(0,0,1000,500);
   ctx.font = "50px Arial";
   ctx.fillText(first,400,150,70);
@@ -35,6 +41,7 @@ function draw(){
   } else if(ans == 2){
   ctx.drawImage(question,600,200,100,100)
   }
+
 }
 
 function restart(){
