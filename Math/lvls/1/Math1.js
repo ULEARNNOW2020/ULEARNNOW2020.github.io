@@ -9,6 +9,9 @@ var time = 100;
 const question = new Image();
 question.src = "img/question.png";
 
+const bg = new Image();
+bg.src = "img/bg.png";
+
     //  РАНДОМ ЧИСЕЛ
 function getRandom(min, max) {
   return Math.random() * (max - min) + min;
@@ -24,6 +27,7 @@ var second = Math.round(second1);
 function draw(){
   ctx.fillStyle = "black";
   ctx.clearRect(0,0,1500,500);
+  ctx.drawImage(bg,0,0,3000,3000);
   ctx.font = "50px Arial";
   ctx.fillText(first,400,150,90);
   ctx.fillText(second,820,150,90);
@@ -31,16 +35,16 @@ function draw(){
   ctx.fillRect(5,5,time*13,10);
   if (ans == 1){
     ctx.fillStyle = "green";
-    ctx.fillText("правильно",550,200,300);
+    ctx.fillText("правильно",500,200,300);
   } else if(ans == 0){
     ctx.fillStyle = "red";
-    ctx.fillText("не правильно",550,200,300);
+    ctx.fillText("не правильно",500,200,300);
   } else if(ans == 2){
   ctx.drawImage(question,600,200,100,100)
   time=time-0.4;
 } else if(ans==3){
   ctx.fillStyle = "red";
-  ctx.fillText("вы не успели",550,200,300);
+  ctx.fillText("вы не успели",500,200,300);
 }
 
 
