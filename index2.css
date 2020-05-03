@@ -1,0 +1,33 @@
+body {
+
+}
+
+#math{
+ position:relative;
+ left:120px;
+ top:120px;
+ transition: 1s;
+}
+#math:hover {
+ transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+#physic{
+  position:relative;
+  left:310px;
+  top:120px;
+  transition: 1s;
+}
+#physic:hover {
+ transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+#it{
+  position:relative;
+  left:490px;
+  top:120px;
+  transition: 1s;
+}
+#it:hover {
+ transform: scale(1.2); /* Увеличиваем масштаб */
+}

@@ -1,33 +1,81 @@
-body {
-
+body{
+  margin:0;
+  position: fixed;
 }
 
-#math{
- position:relative;
- left:120px;
- top:120px;
- transition: 1s;
-}
-#math:hover {
- transform: scale(1.2); /* Увеличиваем масштаб */
-}
-
-#physic{
+#play{
   position:relative;
-  left:310px;
-  top:120px;
-  transition: 1s;
+  top:-400px;
+  left:505px;
+  width:22%;
+  transition: 0.5s;
 }
-#physic:hover {
- transform: scale(1.2); /* Увеличиваем масштаб */
+#play:hover {
+ transform: scale(1.15); /* Увеличиваем масштаб */
 }
 
-#it{
+#top{
   position:relative;
-  left:490px;
-  top:120px;
-  transition: 1s;
+  width:10%;
+  top:-420px;
+  left:10px;
+  transition: 0.5s;
 }
-#it:hover {
- transform: scale(1.2); /* Увеличиваем масштаб */
+#top:hover {
+ transform: scale(1.08); /* Увеличиваем масштаб */
+}
+
+#titul{
+  position:relative;
+  width:10%;
+  top:-1155px;
+  left:10px;
+  transition: 0.5s;
+}
+#titul:hover {
+ transform: scale(1.08); /* Увеличиваем масштаб */
+}
+
+#sound{
+  position:relative;
+  width:10%;
+  top:-1290px;
+  left:1150px;
+  transition: 0.5s;
+}
+#sound:hover {
+ transform: scale(1.08); /* Увеличиваем масштаб */
+}
+
+#share{
+  position:relative;
+  width:10%;
+  top:-555px;
+  left:1150px;
+  transition: 0.5s;
+}
+#share:hover {
+ transform: scale(1.08); /* Увеличиваем масштаб */
+}
+
+#set{
+  position:relative;
+  top:-370px;
+  left:505px;
+  width:22%;
+  transition: 0.5s;
+}
+#set:hover {
+ transform: scale(1.15); /* Увеличиваем масштаб */
+}
+
+#crt{
+  position:relative;
+  top:-330px;
+  left:505px;
+  width:22%;
+  transition: 0.5s;
+}
+#crt:hover {
+ transform: scale(1.15); /* Увеличиваем масштаб */
 }

@@ -13,7 +13,7 @@ position: fixed;
   position:relative;
   top:-200px;
   left:180px;
-  transition: 0.2s;
+  transition: 0.07s;
 }
 #restart:hover {
   transform: scale(1.05);
@@ -23,7 +23,7 @@ position: fixed;
   position:relative;
   top:-300px;
   left:450px;
-  transition: 0.2s;
+  transition: 0.07s;
   width:9%;
 }
 #more:hover {
@@ -34,7 +34,7 @@ position: fixed;
   position:relative;
   top:-300px;
   left:598px;
-  transition: 0.2s;
+  transition: 0.07s;
   width:9%;
 }
 #less:hover {
@@ -46,7 +46,7 @@ position: fixed;
   width:9%;
   top:-300px;
   left:345px;
-  transition: 0.2s;
+  transition: 0.07s;
 }
 #ravno:hover {
   transform: scale(1.05);

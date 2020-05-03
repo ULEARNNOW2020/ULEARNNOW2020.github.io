@@ -33,18 +33,18 @@ function draw(){
   ctx.clearRect(0,0,1500,500);
   ctx.drawImage(bg,0,0,3000,3000);
   ctx.font = "50px Arial";
-  ctx.fillText(first,400,150,90);
+  ctx.fillText(first,430,150,90);
   ctx.fillText(second,820,150,90);
   ctx.fillStyle = "red";
   ctx.fillRect(5,5,time*13,10);
   if (ans == 1){
     ctx.fillStyle = "green";
-    ctx.fillText("правильно",500,200,300);
+    ctx.fillText("правильно",540,200,300);
   } else if(ans == 0){
     ctx.fillStyle = "red";
     ctx.fillText("не правильно",500,200,300);
   } else if(ans == 2){
-  ctx.drawImage(question,600,200,100,100)
+  ctx.drawImage(question,600,100,100,100)
   time=time-tim;
 } else if(ans==3){
   ctx.fillStyle = "red";
