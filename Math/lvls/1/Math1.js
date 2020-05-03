@@ -4,6 +4,8 @@ var ctx = canvas.getContext("2d");
     //   ПЕРЕМЕННЫЕ
 var ans = 2;
 var time = 100;
+var tim = 0.4;
+var lvl = 1;
 
      //    IMAGES
 const question = new Image();
@@ -16,9 +18,11 @@ bg.src = "img/bg.png";
 function getRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
+
 var first1 = getRandom(0, 10);
-var first = Math.round(first1);
 var second1 = getRandom(0, 10);
+
+var first = Math.round(first1);
 var second = Math.round(second1);
 
 
@@ -41,7 +45,7 @@ function draw(){
     ctx.fillText("не правильно",500,200,300);
   } else if(ans == 2){
   ctx.drawImage(question,600,200,100,100)
-  time=time-0.4;
+  time=time-tim;
 } else if(ans==3){
   ctx.fillStyle = "red";
   ctx.fillText("вы не успели",500,200,300);
@@ -58,10 +62,20 @@ function draw(){
 
 function restart(){
   ans = 2;
+  tim=tim+0.05;
+  lvl++;
   time=100;
-  first1 = getRandom(0, 10);
+  if (lvl < 10){
+    first1 = getRandom(0, 10);
+    second1 = getRandom(0, 10);
+  } else if(lvl > 9 && lvl < 20){
+    first1 = getRandom(10, 99);
+    second1 = getRandom(10, 99);
+  } else if(lvl > 19){
+    first1 = getRandom(100, 999);
+    second1 = getRandom(100, 999);
+  }
   first = Math.round(first1);
-  second1 = getRandom(0, 10);
   second = Math.round(second1);
 }
 

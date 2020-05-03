@@ -1,5 +1,6 @@
 body{
 margin:0;
+position: fixed;
 }
 
 #myCanvas {
@@ -32,7 +33,7 @@ margin:0;
 #less{
   position:relative;
   top:-300px;
-  left:590px;
+  left:598px;
   transition: 0.2s;
   width:9%;
 }
