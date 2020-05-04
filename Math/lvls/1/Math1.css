@@ -10,9 +10,10 @@ position: fixed;
 }
 
 #restart{
-  position:relative;
-  top:-200px;
-  left:180px;
+  position:absolute;
+  top:63%;
+  left:41%;
+  width:20%;
   transition: 0.07s;
 }
 #restart:hover {
@@ -20,9 +21,9 @@ position: fixed;
 }
 
 #more{
-  position:relative;
-  top:-300px;
-  left:450px;
+  position:absolute;
+  top:43%;
+  left:32%;
   transition: 0.07s;
   width:9%;
 }
@@ -31,9 +32,9 @@ position: fixed;
 }
 
 #less{
-  position:relative;
-  top:-300px;
-  left:598px;
+  position:absolute;
+  top:43%;
+  left:60%;
   transition: 0.07s;
   width:9%;
 }
@@ -42,10 +43,10 @@ position: fixed;
 }
 
 #ravno{
-  position:relative;
+  position:absolute;
   width:9%;
-  top:-300px;
-  left:345px;
+  top:43%;
+  left:46%;
   transition: 0.07s;
 }
 #ravno:hover {

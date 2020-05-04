@@ -3,30 +3,33 @@ body {
 }
 
 #math{
- position:relative;
- left:120px;
- top:120px;
+ position:absolute;
+ left:10%;
+ top:30%;
  transition: 1s;
+ width:17%
 }
 #math:hover {
  transform: scale(1.2); /* Увеличиваем масштаб */
 }
 
 #physic{
-  position:relative;
-  left:310px;
-  top:120px;
+  position:absolute;
+  left:40%;
+  top:30%;
   transition: 1s;
+  width:17%
 }
 #physic:hover {
  transform: scale(1.2); /* Увеличиваем масштаб */
 }
 
 #it{
-  position:relative;
-  left:490px;
-  top:120px;
+  position:absolute;
+  left:70%;
+  top:30%;
   transition: 1s;
+  width:17%
 }
 #it:hover {
  transform: scale(1.2); /* Увеличиваем масштаб */

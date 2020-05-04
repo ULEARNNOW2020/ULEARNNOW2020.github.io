@@ -3,10 +3,11 @@ body{
   position: fixed;
 }
 
+
 #play{
-  position:relative;
-  top:-400px;
-  left:505px;
+  position:absolute;
+  top:30%;
+  left:41%;
   width:22%;
   transition: 0.5s;
 }
@@ -15,10 +16,10 @@ body{
 }
 
 #top{
-  position:relative;
+  position:absolute;
   width:10%;
-  top:-420px;
-  left:10px;
+  bottom:20%;
+  left:2%;
   transition: 0.5s;
 }
 #top:hover {
@@ -26,10 +27,10 @@ body{
 }
 
 #titul{
-  position:relative;
+  position:absolute;
   width:10%;
-  top:-1155px;
-  left:10px;
+  top:2%;
+  left:2%;
   transition: 0.5s;
 }
 #titul:hover {
@@ -37,10 +38,10 @@ body{
 }
 
 #sound{
-  position:relative;
+  position:absolute;
   width:10%;
-  top:-1290px;
-  left:1150px;
+  top:2%;
+  right:0%;
   transition: 0.5s;
 }
 #sound:hover {
@@ -48,10 +49,10 @@ body{
 }
 
 #share{
-  position:relative;
+  position:absolute;
+  bottom:20%;
+  right:0%;
   width:10%;
-  top:-555px;
-  left:1150px;
   transition: 0.5s;
 }
 #share:hover {
@@ -59,9 +60,9 @@ body{
 }
 
 #set{
-  position:relative;
-  top:-370px;
-  left:505px;
+  position:absolute;
+  top:47%;
+  left:41%;
   width:22%;
   transition: 0.5s;
 }
@@ -70,9 +71,9 @@ body{
 }
 
 #crt{
-  position:relative;
-  top:-330px;
-  left:505px;
+  position:absolute;
+  top:65%;
+  left:41%;
   width:22%;
   transition: 0.5s;
 }

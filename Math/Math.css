@@ -2,35 +2,11 @@ body{
 
 }
 
-#third{
-  position:relative;
-  width:5.5%;
-  top:0px;
-  left:190px;
-  transition: 0.2s;
-  border:5px solid;
-}
-#third:hover{
-  transform: scale(1.06);
-}
-
-#scnd{
-  position:relative;
-  width:5.5%;
-  top:0px;
-  left:140px;
-  transition: 0.2s;
-  border:5px solid;
-}
-#scnd:hover{
-  transform: scale(1.06);
-}
-
 #frst{
-  position:relative;
+  position:absolute;
   width:5.5%;
-  top:0px;
-  left:90px;
+  top:20%;
+  left:40%;
   transition: 0.2s;
   border:5px solid;
 }
@@ -39,7 +15,9 @@ body{
 }
 
 #video1 {
-  position:relative;
-  top:50px;
-  left:50px;
+  position:absolute;
+  top:10%;
+  left:7%;
+  width:30%;
+  height: 40%;
 }
