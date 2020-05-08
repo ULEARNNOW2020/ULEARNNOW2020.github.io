@@ -19,7 +19,7 @@ rules = document.getElementsByClassName('rules')[0];
     //   ПЕРЕМЕННЫЕ
 var time = 100;
 var ans = 5;
-var tim = 0.7;
+var tim = 0.9;
 var lvl = 1;
 var next = 100;
 var true1 = 0;
@@ -137,10 +137,10 @@ function draw(){
  if (ans == 1){
    true1 = true1 + 0.0303;
  } else if(ans == 0){
-   false1 = false1 + 0.0404;
+   false1 = false1 + 0.0303;
  }  else if(ans==3){
-   lost = lost + 0.0404;
-   false1 = false1 + 0.0404;
+   lost = lost + 0.0303;
+   false1 = false1 + 0.0303;
 }}
  }
 
@@ -152,7 +152,7 @@ function restart(){
   frut = Math.round(frut1);
   frut2 = Math.round(frut21);
   ans = 2;
-  tim=tim+0.03;
+  tim=tim+0.04;
   lvl++;
   time=100;
   if (lvl < 10){
@@ -204,4 +204,4 @@ function ravno(){
 }
 
 window.requestAnimationFrame(draw);
-let game = setInterval(draw,40);//вызов функции каждые 20мс
+let game = setInterval(draw,50);//вызов функции каждые 20мс
