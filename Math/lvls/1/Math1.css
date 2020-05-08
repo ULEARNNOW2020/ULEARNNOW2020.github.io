@@ -1,52 +1,111 @@
+#lbg{
+ position:fixed;
+ width:101%;
+ height:120%;
+ left:0%;
+ top:-10%;
+}
+
 body{
 margin:0;
 position: fixed;
 }
 
-#myCanvas {
-  position:relative;
-  left:-10px;
-  top:-5px;
+.load {
+  position:fixed;
+  top:40%;
+  left:44%;
+  width:10%;
+  -webkit-animation-name: cog;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: cog;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+   -ms-animation-name: cog;
+  -ms-animation-duration: 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: cog;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes cog {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes cog {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes cog {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes cog {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
 }
 
-#restart{
-  position:absolute;
-  top:63%;
-  left:41%;
-  width:20%;
-  transition: 0.07s;
+#rules{
+  position:fixed;
+  width:70%;
+  left:16%;
+  top:3%
 }
-#restart:hover {
-  transform: scale(1.05);
+
+#start{
+  position:fixed;
+  width:20%;
+  left:42%;
+  top:70%;
+  transition: 0.5s;
+}
+#start:hover{
+  transform: scale(1.2);
+}
+
+#myCanvas {
+  position:absolute;
+  left:0%;
+  top:0%;
 }
 
 #more{
-  position:absolute;
-  top:50%;
+  position:fixed;
   left:40%;
   transition: 0.07s;
   width:9%;
+  top:50%;
 }
 #more:hover {
   transform: scale(1.05);
 }
 
 #less{
-  position:absolute;
-  top:50%;
+  position:fixed;
   left:68%;
   transition: 0.07s;
   width:9%;
+  top:50%;
 }
 #less:hover {
   transform: scale(1.05);
 }
 
 #ravno{
-  position:absolute;
+  position:fixed;
   width:9%;
-  top:50%;
   left:53.5%;
+  top:50%;
   transition: 0.07s;
 }
 #ravno:hover {

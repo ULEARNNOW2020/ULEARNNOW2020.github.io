@@ -4,14 +4,13 @@ body{
 
 #frst{
   position:absolute;
-  width:5.5%;
+  width:7%;
   top:20%;
-  left:40%;
-  transition: 0.2s;
-  border:5px solid;
+  left:45%;
+  transition: 0.3s;
 }
 #frst:hover{
-  transform: scale(1.06);
+  transform: scale(1.1);
 }
 
 #video1 {

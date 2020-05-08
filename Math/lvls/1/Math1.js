@@ -1,10 +1,25 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
+loader = document.getElementsByClassName('loading')[0];
+rules = document.getElementsByClassName('rules')[0];
+
+ function start(){
+     rules.style.display = 'none'; // скрываем .rules
+     ans = 2;
+ }
+
+ function loading() {
+  setTimeout(function() {
+    loader.style.display = 'none'; // скрываем .loader
+    rules.style.display = 'block';
+  }, 3000); // зарежка перед скрытием в миллисекундах
+}
+
     //   ПЕРЕМЕННЫЕ
-var ans = 2;
 var time = 100;
-var tim = 0.4;
+var ans = 5;
+var tim = 0.7;
 var lvl = 1;
 var next = 100;
 var true1 = 0;
@@ -122,9 +137,10 @@ function draw(){
  if (ans == 1){
    true1 = true1 + 0.0303;
  } else if(ans == 0){
-   false1 = false1 + 0.0303;
+   false1 = false1 + 0.0404;
  }  else if(ans==3){
-   lost = lost + 0.0303;
+   lost = lost + 0.0404;
+   false1 = false1 + 0.0404;
 }}
  }
 
@@ -188,4 +204,4 @@ function ravno(){
 }
 
 window.requestAnimationFrame(draw);
-let game = setInterval(draw,30);//вызов функции каждые 20мс
+let game = setInterval(draw,40);//вызов функции каждые 20мс
