@@ -9,6 +9,8 @@
 body{
 margin:0;
 position: fixed;
+height:100%;
+width:104%
 }
 
 .load {
@@ -55,6 +57,14 @@ position: fixed;
   }
 }
 
+#myCanvas {
+  position:absolute;
+  left:0%;
+  top:0%;
+  height:100%;
+  width:100%;
+}
+
 #rules{
   position:fixed;
   width:70%;
@@ -71,12 +81,6 @@ position: fixed;
 }
 #start:hover{
   transform: scale(1.2);
-}
-
-#myCanvas {
-  position:absolute;
-  left:0%;
-  top:0%;
 }
 
 #more{

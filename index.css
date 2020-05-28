@@ -1,12 +1,14 @@
 body{
-  margin:0;
   position: fixed;
+  margin:0;
+  height: 100%;
+  width:100%
 }
 
 
 #play{
   position:absolute;
-  top:30%;
+  top:37%;
   left:41%;
   width:22%;
   transition: 0.5s;
@@ -18,8 +20,8 @@ body{
 #top{
   position:absolute;
   width:10%;
-  bottom:20%;
-  left:2%;
+  bottom:1%;
+  left:0.5%;
   transition: 0.5s;
 }
 #top:hover {
@@ -30,7 +32,7 @@ body{
   position:absolute;
   width:10%;
   top:2%;
-  left:2%;
+  left:0.5%;
   transition: 0.5s;
 }
 #titul:hover {
@@ -50,7 +52,7 @@ body{
 
 #share{
   position:absolute;
-  bottom:20%;
+  bottom:1%;
   right:0%;
   width:10%;
   transition: 0.5s;
@@ -61,7 +63,7 @@ body{
 
 #set{
   position:absolute;
-  top:47%;
+  top:57%;
   left:41%;
   width:22%;
   transition: 0.5s;
@@ -72,7 +74,7 @@ body{
 
 #crt{
   position:absolute;
-  top:65%;
+  top:77%;
   left:41%;
   width:22%;
   transition: 0.5s;
