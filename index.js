@@ -17,8 +17,8 @@ lp.src = "img/lp.png";
 
 function draw(){
   ctx.drawImage(bg,x,0,2400,649);
-  ctx.drawImage(bg2,460,190,370,400);
-  ctx.drawImage(lp,445,30,380,180);
+  ctx.drawImage(bg2,460,190,370,370);
+  ctx.drawImage(lp,445,10,380,170);
   if (z == 0){
     x = x + 0.5;
   }

@@ -25,6 +25,10 @@ var next = 100;
 var true1 = 0;
 var false1 = 0;
 var lost = 0;
+var pmX = 30;
+var pmY = 30;
+var pmXX = 740;
+var pmYY = 170;
 
      //    IMAGES
 const question = new Image();
@@ -32,6 +36,15 @@ question.src = "img/question.png";
 
 const bg = new Image();
 bg.src = "img/bg.png";
+
+const passed = new Image();
+passed.src = "img/passed.png";
+
+const missed = new Image();
+missed.src = "img/missed.png";
+
+const timeBar = new Image();
+timeBar.src = "img/time.png";
 
 const fr1 = new Image();
 const fr2 = new Image();
@@ -101,23 +114,37 @@ function draw(){
   ctx.fillText(first,530,200,90);
   ctx.fillText(second,920,200,90);
   ctx.fillStyle = "red";
-  ctx.fillRect(5,5,time*13,10);
+  ctx.drawImage(timeBar,0,0,time*13,50,-10,-15,time*14,36);
   ctx.fillStyle = "green";
   ctx.fillText(Math.round(true1),200,337,90);
   ctx.fillStyle = "red";
   ctx.fillText(Math.round(false1),200,420,90);
 
   if (ans == 1){
-    ctx.fillStyle = "green";
-    ctx.fillText("правильно",540,200,300);
+    for(var cycle=0;cycle<100;cycle=cycle+0.03){
+      pmX=pmX+0.001;
+      pmY=pmY+0.001;
+      pmXX=pmXX-0.0005;
+      pmYY=pmYY-0.0005;
+    }
+    ctx.drawImage(passed,pmXX,pmYY,pmX,pmY);
     next = next - 3;
   } else if(ans == 0){
-    ctx.fillStyle = "red";
-    ctx.fillText("не правильно",500,200,300);
+    for(var cycle=0;cycle<100;cycle=cycle+0.03){
+      pmX=pmX+0.001;
+      pmY=pmY+0.001;
+      pmXX=pmXX-0.0005;
+      pmYY=pmYY-0.0005;
+    }
+    ctx.drawImage(missed,pmXX,pmYY,pmX,pmY);
     next = next - 3;
   } else if(ans == 2){
   ctx.drawImage(question,700,150,100,100)
   time=time-tim;
+  pmX=30;
+  pmY=30;
+  pmXX = 740;
+  pmYY = 170;
 } else if(ans==3){
   ctx.fillStyle = "red";
   ctx.fillText("вы не успели",500,200,300);
