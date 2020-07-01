@@ -30,6 +30,17 @@ var pmY = 30;
 var pmXX = 740;
 var pmYY = 170;
 
+    //    AUDIO
+
+    var soundBT = new Audio();
+    function playSound(){
+        soundBT.src = "audio/btn.mp3";
+        soundBT.volume = 0.3;
+        soundBT.pause();
+        soundBT.currentTime = 0;
+        soundBT.play();
+    }
+
      //    IMAGES
 const question = new Image();
 question.src = "img/question.png";
@@ -229,6 +240,8 @@ function ravno(){
     }
   }
 }
+
+
 
 window.requestAnimationFrame(draw);
 let game = setInterval(draw,50);//вызов функции каждые 20мс

@@ -4,6 +4,14 @@ var ctx = canvas.getContext("2d");
 var x = -540;
 var z = 0;
 
+var soundBT = new Audio();
+function playSound(){
+    soundBT.src = "audio/btn.mp3";
+    soundBT.volume = 0.3;
+    soundBT.pause();
+    soundBT.currentTime = 0;
+    soundBT.play();
+}
 
 //    IMAGES
 const bg = new Image();
