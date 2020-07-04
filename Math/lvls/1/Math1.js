@@ -29,6 +29,7 @@ var pmX = 30;
 var pmY = 30;
 var pmXX = 740;
 var pmYY = 170;
+var score = 0;
 
     //    AUDIO
 
@@ -120,11 +121,15 @@ function draw(){
   ctx.drawImage(bg,0,0,1260,620);
   ctx.drawImage(fr1,467,100,160,170);
   ctx.drawImage(fr2,860,100,160,170);
+  ctx.drawImage(timeBar,60,210,score/100,42);
   ctx.fillStyle = "black";
-  ctx.font = "50px Arial";
+  ctx.font = "45px Arial black";
   ctx.fillText(first,530,200,90);
   ctx.fillText(second,920,200,90);
+  ctx.fillStyle = "blue";
+  ctx.fillText(Math.round(score/24),180,70,150);
   ctx.fillStyle = "red";
+  ctx.font = "50px Arial";
   ctx.drawImage(timeBar,0,0,time*13,50,-10,-15,time*14,36);
   ctx.fillStyle = "green";
   ctx.fillText(Math.round(true1),200,337,90);
@@ -140,6 +145,7 @@ function draw(){
     }
     ctx.drawImage(passed,pmXX,pmYY,pmX,pmY);
     next = next - 3;
+    score = score+40*tim;
   } else if(ans == 0){
     for(var cycle=0;cycle<100;cycle=cycle+0.03){
       pmX=pmX+0.001;
@@ -157,8 +163,13 @@ function draw(){
   pmXX = 740;
   pmYY = 170;
 } else if(ans==3){
-  ctx.fillStyle = "red";
-  ctx.fillText("вы не успели",500,200,300);
+  for(var cycle=0;cycle<100;cycle=cycle+0.03){
+    pmX=pmX+0.001;
+    pmY=pmY+0.001;
+    pmXX=pmXX-0.0005;
+    pmYY=pmYY-0.0005;
+  }
+  ctx.drawImage(missed,pmXX,pmYY,pmX,pmY);
   next = next - 3;
 }
 
