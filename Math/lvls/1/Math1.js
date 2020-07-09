@@ -30,6 +30,9 @@ var pmY = 30;
 var pmXX = 740;
 var pmYY = 170;
 var score = 0;
+var star1 = 138;
+var star2 = 138;
+var star3 = 138;
 
     //    AUDIO
 
@@ -52,6 +55,9 @@ bg.src = "img/bg.png";
 const passed = new Image();
 passed.src = "img/passed.png";
 
+const star = new Image();
+star.src = "img/star.png";
+
 const missed = new Image();
 missed.src = "img/missed.png";
 
@@ -69,8 +75,8 @@ function getRandom(min, max) {
 
 var first1 = getRandom(0, 10);
 var second1 = getRandom(0, 10);
-var frut1 = getRandom(0, 8);
-var frut21 = getRandom(0, 8);
+var frut1 = getRandom(0, 7);
+var frut21 = getRandom(0, 7);
 
 var frut = Math.round(frut1);
 var frut2 = Math.round(frut21);
@@ -83,60 +89,59 @@ var second = Math.round(second1);
 function draw(){
   if (frut == 0){
     fr1.src = "img/fruits/app.png";
+    fr2.src = "img/fruits/vin.png";
   } else if (frut == 1){
     fr1.src = "img/fruits/bak.png";
+    fr2.src = "img/fruits/app.png";
   } else if (frut == 2){
     fr1.src = "img/fruits/banan.png";
+    fr2.src = "img/fruits/bak.png";
   } else if (frut == 3){
     fr1.src = "img/fruits/grush.png";
+    fr2.src = "img/fruits/banan.png";
   } else if (frut == 4){
     fr1.src = "img/fruits/klub.png";
+    fr2.src = "img/fruits/grush.png";
   } else if (frut == 5){
     fr1.src = "img/fruits/orang.png";
+    fr2.src = "img/fruits/klub.png";
   } else if (frut == 6){
     fr1.src = "img/fruits/pom.png";
+    fr2.src = "img/fruits/orang.png";
   } else if (frut == 7){
     fr1.src = "img/fruits/vin.png";
+    fr2.src = "img/fruits/pom.png";
   }
 
-  if (frut2 == 0){
-    fr2.src = "img/fruits/app.png";
-  } else if (frut2 == 1){
-    fr2.src = "img/fruits/bak.png";
-  } else if (frut2 == 2){
-    fr2.src = "img/fruits/banan.png";
-  } else if (frut2 == 3){
-    fr2.src = "img/fruits/grush.png";
-  } else if (frut2 == 4){
-    fr2.src = "img/fruits/klub.png";
-  } else if (frut2 == 5){
-    fr2.src = "img/fruits/orang.png";
-  } else if (frut2 == 6){
-    fr2.src = "img/fruits/pom.png";
-  } else if (frut2 == 7){
-    fr2.src = "img/fruits/vin.png";
-  }
+
 
   ctx.clearRect(0,0,1500,500);
   ctx.drawImage(bg,0,0,1260,620);
+  ctx.drawImage(timeBar,0,0,score/50,103,60,210,score/235,56); //1200 255
   ctx.drawImage(fr1,467,100,160,170);
   ctx.drawImage(fr2,860,100,160,170);
-  ctx.drawImage(timeBar,60,210,score/100,42);
   ctx.fillStyle = "black";
-  ctx.font = "45px Arial black";
-  ctx.fillText(first,530,200,90);
-  ctx.fillText(second,920,200,90);
+  ctx.font = "50px Arial black";
+  ctx.fillText(first,527,205,90);
+  ctx.fillText(second,917,205,90);
   ctx.fillStyle = "blue";
-  ctx.fillText(Math.round(score/24),180,70,150);
+  ctx.fillText(Math.round(score/24),175,70,150);
   ctx.fillStyle = "red";
-  ctx.font = "50px Arial";
   ctx.drawImage(timeBar,0,0,time*13,50,-10,-15,time*14,36);
   ctx.fillStyle = "green";
   ctx.fillText(Math.round(true1),200,337,90);
   ctx.fillStyle = "red";
   ctx.fillText(Math.round(false1),200,420,90);
 
-  if (ans == 1){
+if (lvl != 31){
+  if(ans == 2){
+    pmX=30;
+    pmY=30;
+    pmXX = 740;
+    pmYY = 170;
+  ctx.drawImage(question,700,150,100,100)
+  time=time-tim;
+} else if (ans == 1){
     for(var cycle=0;cycle<100;cycle=cycle+0.03){
       pmX=pmX+0.001;
       pmY=pmY+0.001;
@@ -155,14 +160,7 @@ function draw(){
     }
     ctx.drawImage(missed,pmXX,pmYY,pmX,pmY);
     next = next - 3;
-  } else if(ans == 2){
-  ctx.drawImage(question,700,150,100,100)
-  time=time-tim;
-  pmX=30;
-  pmY=30;
-  pmXX = 740;
-  pmYY = 170;
-} else if(ans==3){
+  }  else if(ans==3){
   for(var cycle=0;cycle<100;cycle=cycle+0.03){
     pmX=pmX+0.001;
     pmY=pmY+0.001;
@@ -191,18 +189,37 @@ function draw(){
    lost = lost + 0.0303;
    false1 = false1 + 0.0303;
 }}
- }
+}
+
+if (true1 >= 13){
+  ctx.drawImage(star,124,star1,50,91);
+  if (star1 <= 163){
+    star1 = star1 + 0.68;
+  }
+}
+if (true1 >= 20){
+  ctx.drawImage(star,193,star2,50,91);
+  if (star2 <= 163){
+    star2 = star2 + 0.68;
+  }
+}
+if (true1 >= 27){
+  ctx.drawImage(star,265,star3,50,91);
+  if (star3 <= 163){
+    star3 = star3 + 0.68;
+  }
+}}
 
 
 function restart(){
+  lvl++;
   if (lvl != 31){
-  frut1 = getRandom(0, 8);
-  frut21 = getRandom(0, 8);
+  frut1 = getRandom(0, 7);
+  frut21 = getRandom(0, 7);
   frut = Math.round(frut1);
   frut2 = Math.round(frut21);
   ans = 2;
   tim=tim+0.04;
-  lvl++;
   time=100;
   if (lvl < 10){
     first1 = getRandom(0, 10);
@@ -225,32 +242,30 @@ function restart(){
 
     //   ОТВЕТЫ
 function more(){
-  if (first > second && time > 0 && ans == 2){
+  if (ans == 2){
+  if (first > second & time > 0){
     ans = 1;
   } else {
-    if(ans == 2){
     ans = 0;
-    }
-  }
+  }}
 }
 function less(){
-  if (first < second && time > 0 && ans == 2){
+  if (ans == 2){
+  if (first < second & time > 0){
     ans = 1;
   } else {
-    if(ans == 2){
     ans = 0;
-    }
-  }
+  }}
 }
 function ravno(){
-  if (first==second && time > 0 && ans == 2){
+    if (ans == 2){
+  if (first==second & time > 0){
     ans = 1;
   } else {
-    if(ans == 2){
     ans = 0;
-    }
+  }}
   }
-}
+
 
 
 
