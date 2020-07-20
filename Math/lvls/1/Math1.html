@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="Math1.css">
   </head>
-  <body onload="loading();">
+  <body onload="loading()">
   <canvas width="1290px" height="610px" id="myCanvas"></canvas>
     <img src="img/more.png" id="more" alt="" onmouseover="playSound()" onclick="more()"></img>
     <img src="img/less.png" id="less" alt="" onmouseover="playSound()" onclick="less()"></img>
@@ -14,6 +14,7 @@
   <img src="img/rules.png" id="rules" alt=""></img>
   <img src="img/start.png" id="start" alt="" onclick="start();"></img>
   </div>
+        <img src="img/settings.png" id="set" alt="" onmouseover="playSound()"></img>
       <script>
     rules = document.getElementsByClassName('rules')[0];
     rules.style.display = 'none';
@@ -21,6 +22,7 @@
       <div class="loading">
   <img src="img/load-bg.png" id="lbg"></img>
   <img src="img/loading.png" class="load"></img>
+  <img src="img/load.png" class="loadWrd"></img>
       </div>
             <script src="Math1.js"></script>
   </body>

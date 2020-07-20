@@ -1,3 +1,10 @@
+function loading() {
+ setTimeout(function() {
+   loader.style.display = 'none'; // скрываем .loader
+   rules.style.display = 'block';
+ }, 3000); // зарежка перед скрытием в миллисекундах
+}
+
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
@@ -8,13 +15,6 @@ rules = document.getElementsByClassName('rules')[0];
      rules.style.display = 'none'; // скрываем .rules
      ans = 2;
  }
-
- function loading() {
-  setTimeout(function() {
-    loader.style.display = 'none'; // скрываем .loader
-    rules.style.display = 'block';
-  }, 3000); // зарежка перед скрытием в миллисекундах
-}
 
     //   ПЕРЕМЕННЫЕ
 var time = 100;
@@ -49,8 +49,22 @@ var star3 = 138;
 const question = new Image();
 question.src = "img/question.png";
 
+const scoreBar = new Image();
+scoreBar.src = "img/scoreBar.png";
+
 const bg = new Image();
 bg.src = "img/bg.png";
+
+const final = new Image();
+
+const star11 = new Image();
+star11.src = "img/star1.png";
+
+const star22 = new Image();
+star22.src = "img/star2.png";
+
+const star33 = new Image();
+star33.src = "img/star3.png";
 
 const passed = new Image();
 passed.src = "img/passed.png";
@@ -113,21 +127,18 @@ function draw(){
     fr2.src = "img/fruits/pom.png";
   }
 
-
-
   ctx.clearRect(0,0,1500,500);
   ctx.drawImage(bg,0,0,1260,620);
-  ctx.drawImage(timeBar,0,0,score/50,103,60,210,score/235,56); //1200 255
+  ctx.drawImage(scoreBar,0,0,score/154,103,57,210,score/235,56); //1200 255
   ctx.drawImage(fr1,467,100,160,170);
   ctx.drawImage(fr2,860,100,160,170);
   ctx.fillStyle = "black";
   ctx.font = "50px Arial black";
-  ctx.fillText(first,527,205,90);
+  ctx.fillText(first,523,205,90);
   ctx.fillText(second,917,205,90);
   ctx.fillStyle = "blue";
   ctx.fillText(Math.round(score/24),175,70,150);
-  ctx.fillStyle = "red";
-  ctx.drawImage(timeBar,0,0,time*13,50,-10,-15,time*14,36);
+  ctx.drawImage(timeBar,0,0,time*14,75,312,30,time*9.15,44);
   ctx.fillStyle = "green";
   ctx.fillText(Math.round(true1),200,337,90);
   ctx.fillStyle = "red";
@@ -210,6 +221,8 @@ if (true1 >= 27){
   }
 }}
 
+window.requestAnimationFrame(draw);
+let game = setInterval(draw,50);//вызов функции каждые 20мс
 
 function restart(){
   lvl++;
@@ -265,9 +278,3 @@ function ravno(){
     ans = 0;
   }}
   }
-
-
-
-
-window.requestAnimationFrame(draw);
-let game = setInterval(draw,50);//вызов функции каждые 20мс
